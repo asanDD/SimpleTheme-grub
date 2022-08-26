@@ -1,0 +1,61 @@
+# GRUB2 gfxmenu Linux theme
+
+# Global Property
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Terminus Regular 14"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ canvas {
+    top = 0
+    left = 0 
+    height = 100%
+    width = 30%
+    
+    # Show the boot menu
+    + boot_menu {
+        top = 7%
+        left = 0 
+        height = 86%+1
+        width = 100%
+        menu_pixmap_style = "boot_menu_*.png"
+        item_font = "ubuntu_regular_17"
+        item_color = "#eff0f1"
+        selected_item_color= "#eff0f1"
+        icon_width = 64
+        icon_height = 64
+        item_icon_space = 20
+        item_height = 80
+        item_padding = 0
+        item_spacing = 0
+        selected_item_pixmap_style = "select_*.png"
+        scrollbar = false
+    }
+    
+    # Top space
+    + image { top = 0 left = 0 height = 7%+1 width = 100% file = "boot_menu_c.png" }
+
+    # Show a countdown message using the label component
+    # left = select_w_png_width + icon_width + item_icon_space = 8+64+20 = 92
+    + label {
+    top = 96%
+    left = 92
+    width = 100%-92
+    height = 20
+    align = "left"
+    id = "__timeout__"
+    text = "Booting in %d seconds"
+    color = "#eff0f1"
+    font = "ubuntu_regular_17"
+    }
+
+    # Bottom space
+    + image { top = 93% left = 0 height = 7%+1 width = 100% file = "boot_menu_c.png" }
+
+}
