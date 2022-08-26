@@ -1,2 +1,2 @@
-# simple_theme_grub
+# SimpleTheme-grub
 A simple grub theme
