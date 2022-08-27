@@ -20,9 +20,9 @@ terminal-border: "0"
     
     # Show the boot menu
     + boot_menu {
-        top = 7%
+        top = 80
         left = 0 
-        height = 86%+1
+        height = 880
         width = 100%
         menu_pixmap_style = "boot_menu_*.png"
         item_font = "ubuntu_regular_17"
@@ -37,14 +37,11 @@ terminal-border: "0"
         selected_item_pixmap_style = "select_*.png"
         scrollbar = false
     }
-    
-    # Top space
-    + image { top = 0 left = 0 height = 7%+1 width = 100% file = "boot_menu_c.png" }
 
     # Show a countdown message using the label component
     # left = select_w_png_width + icon_width + item_icon_space = 8+64+20 = 92
     + label {
-    top = 96%
+    top = 100%-48
     left = 92
     width = 100%-92
     height = 20
@@ -55,7 +52,7 @@ terminal-border: "0"
     font = "ubuntu_regular_17"
     }
 
-    # Bottom space
-    + image { top = 93% left = 0 height = 7%+1 width = 100% file = "boot_menu_c.png" }
+    # Menu background
+    + image { top = 0 left = 0 height = 100% width = 100% file = "boot_menu_c.png" }
 
 }
